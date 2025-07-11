@@ -35,3 +35,7 @@ resource "azurerm_storage_account" "S2" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
+resource "azurerm_resource_group" "G3" {
+  name     = "rohit_rg3"
+  location = "West Europe"
+}
