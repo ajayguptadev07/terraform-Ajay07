@@ -39,3 +39,11 @@ resource "azurerm_resource_group" "G3" {
   name     = "rohit_rg3"
   location = "West Europe"
 }
+resource "azurerm_storage_account" "S3" {
+    depends_on = [ azurerm_resource_group.G3 ]
+  name                     = "rohitstr121"
+  resource_group_name      = "rohit_rg3"
+  location                 = "west Europe"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
